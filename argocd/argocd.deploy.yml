@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 
+    repoURL: https://github.com/PBKPL-IT/MS-project.git
     targetRevision: HEAD
-    path: kubernetes-files
+    path: deployment-service.yml
   destination:
-    server: https://US-EAST-CLUSTER-IP.us-east-1.eks.amazonaws.com
+    server: https://8BEE64BB9D434DE4E5927D1A32F33F84.gr7.us-east-1.eks.amazonaws.com
     namespace: dev
   syncPolicy:
     automated:
