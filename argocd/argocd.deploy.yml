@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argoproject
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 
+    targetRevision: HEAD
+    path: kubernetes-files
+  destination:
+    server: https://US-EAST-CLUSTER-IP.us-east-1.eks.amazonaws.com
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
